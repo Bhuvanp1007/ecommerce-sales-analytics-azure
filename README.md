@@ -115,6 +115,7 @@ Revenue trends over time
 Example Query
 SELECT TOP 10 *
 FROM dbo.Sales;
+
 📊 Power BI Dashboard
 
 The Power BI dashboard provides an interactive view of e-commerce sales performance.
@@ -172,8 +173,9 @@ Power BI Dashboard
 <img width="389" height="437" alt="ecommerce-sales-dashboard" src="https://github.com/user-attachments/assets/57e0960e-87e2-40cc-a4c9-34d78c721c11" />
 
 
+## 📁 Project Structure
 
-📁 Project Structure
+```text
 ecommerce-sales-analytics-azure/
 │
 ├── adf/
@@ -198,37 +200,45 @@ ecommerce-sales-analytics-azure/
 │   └── 07_blob_processed_data.png
 │
 └── README.md
-🛠️ Technologies Used
-Cloud & Data
-Microsoft Azure
-Azure Blob Storage
-Azure Data Factory
-Azure SQL Database
-Analytics & Visualization
-SQL
-Microsoft Power BI
-Power Query
-DAX
-Microsoft Excel
-Development
-Visual Studio Code
-Git
-GitHub
-💡 Key Business Analysis
+```
+
+## 🛠️ Technologies Used
+
+### Cloud & Data
+
+- Microsoft Azure
+- Azure Blob Storage
+- Azure Data Factory
+- Azure SQL Database
+
+### Analytics & Visualization
+
+- SQL
+- Microsoft Power BI
+- Power Query
+- DAX
+- Microsoft Excel
+
+### Development
+
+- Visual Studio Code
+- Git
+- GitHub
+
+  
+## 💡 Key Business Analysis
 
 The project enables analysis of:
 
-Overall sales performance
-Revenue trends
-Product performance
-Category performance
-City-level sales
-Payment method distribution
-Order volume
-Units sold
-Average Order Value
-
-The Power BI dashboard allows users to interactively filter the data and investigate sales performance from different perspectives.
+- Overall sales performance
+- Revenue trends
+- Product performance
+- Category performance
+- City-level sales
+- Payment method distribution
+- Order volume
+- Units sold
+- Average Order Value
 
 🔐 Security
 
