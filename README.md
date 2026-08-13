@@ -92,29 +92,39 @@ Processed data is stored in the processed-data container.
 Sales data is available in Azure SQL Database.
 SQL queries are used for validation and analysis.
 The analyzed data is visualized in Power BI.
-🔍 SQL Analysis
+
+## 🔍 SQL Analysis
 
 SQL was used for data validation, KPI analysis, and revenue analysis.
 
-SQL Files
+### SQL Files
+
+```text
 sql/
 ├── 01_data_validation.sql
 ├── 02_kpi_analysis.sql
 └── 03_revenue_analysis.sql
-Analysis Performed
-Data validation
-Total revenue analysis
-Total orders
-Total units sold
-Average Order Value (AOV)
-Revenue by product
-Revenue by category
-Revenue by city
-Revenue by payment method
-Revenue trends over time
-Example Query
+```
+
+### Analysis Performed
+
+- Data validation
+- Total revenue analysis
+- Total orders
+- Total units sold
+- Average Order Value (AOV)
+- Revenue by product
+- Revenue by category
+- Revenue by city
+- Revenue by payment method
+- Revenue trends over time
+
+### Example Query
+
+```sql
 SELECT TOP 10 *
 FROM dbo.Sales;
+```
 
 📊 Power BI Dashboard
 
