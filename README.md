@@ -54,38 +54,44 @@ Raw CSV → Azure Blob Storage → Azure Data Factory → Processed Data → Azu
                          │
                          ▼
                   Power BI Dashboard
-☁️ Azure Services
-Azure Blob Storage
+
+## ☁️ Azure Services
+
+### Azure Blob Storage
 
 Used to store the raw and processed sales data.
 
+```text
 raw-data/
 └── sales.csv
 
 processed-data/
-└── sales_processed...
-Azure Data Factory
+└── sales_processed.csv
+```
+
+### Azure Data Factory
 
 Used as the data integration layer.
 
-Pipeline: PL_Load_Sales_Data
+**Pipeline:** `PL_Load_Sales_Data`
 
-Activities:
+**Activities:**
 
-Copy data1
-Copy data2
+- `Copy data1`
+- `Copy data2`
 
 The pipeline was successfully validated and executed.
 
-Azure SQL Database
+### Azure SQL Database
 
 Used to store and query the structured sales data.
 
-Database: EcommerceDB
+**Database:** `EcommerceDB`
 
-Table: dbo.Sales
+**Table:** `dbo.Sales`
 
-🔄 Data Pipeline
+## 🔄 Data Pipeline
+
 Raw sales.csv is stored in Azure Blob Storage.
 Azure Data Factory processes and moves the data.
 Processed data is stored in the processed-data container.
