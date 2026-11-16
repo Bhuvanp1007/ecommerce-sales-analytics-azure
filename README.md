@@ -1,2 +1,252 @@
-# ecommerce-sales-analytics-azure
-End-to-end e-commerce sales analytics project using Azure Data Factory, Azure SQL Database, SQL, and Power BI.
+# E-Commerce Sales Analytics using Azure
+
+## 📌 Project Overview
+
+An end-to-end e-commerce sales analytics project built using Microsoft Azure, SQL, and Power BI.
+
+The project demonstrates a complete data analytics workflow, starting with raw sales data stored in Azure Blob Storage, moving and processing the data using Azure Data Factory, storing the sales data in Azure SQL Database, performing SQL analysis, and creating an interactive Power BI dashboard for business reporting.
+
+### Data Flow
+
+Raw CSV → Azure Blob Storage → Azure Data Factory → Processed Data → Azure SQL Database → SQL Analysis → Power BI
+
+---
+
+## 🎯 Objectives
+
+- Build an end-to-end cloud-based data analytics solution.
+- Store raw and processed sales data using Azure Blob Storage.
+- Use Azure Data Factory for data integration and data movement.
+- Store structured sales data in Azure SQL Database.
+- Perform data validation and business analysis using SQL.
+- Calculate important sales KPIs.
+- Analyze revenue and sales performance across different dimensions.
+- Build an interactive Power BI dashboard for business reporting.
+
+---
+
+## 🏗️ Architecture
+
+```text
+                    Raw Sales Data
+                         │
+                         ▼
+                Azure Blob Storage
+                    raw-data
+                         │
+                         ▼
+                Azure Data Factory
+                 PL_Load_Sales_Data
+                    │         │
+                    ▼         ▼
+              Copy data1   Copy data2
+                         │
+                         ▼
+                Processed Data
+                Azure Blob Storage
+                  processed-data
+                         │
+                         ▼
+                Azure SQL Database
+                    EcommerceDB
+                         │
+                         ▼
+                    SQL Analysis
+                         │
+                         ▼
+                  Power BI Dashboard
+☁️ Azure Services
+Azure Blob Storage
+
+Used to store the raw and processed sales data.
+
+raw-data/
+└── sales.csv
+
+processed-data/
+└── sales_processed...
+Azure Data Factory
+
+Used as the data integration layer.
+
+Pipeline: PL_Load_Sales_Data
+
+Activities:
+
+Copy data1
+Copy data2
+
+The pipeline was successfully validated and executed.
+
+Azure SQL Database
+
+Used to store and query the structured sales data.
+
+Database: EcommerceDB
+
+Table: dbo.Sales
+
+🔄 Data Pipeline
+Raw sales.csv is stored in Azure Blob Storage.
+Azure Data Factory processes and moves the data.
+Processed data is stored in the processed-data container.
+Sales data is available in Azure SQL Database.
+SQL queries are used for validation and analysis.
+The analyzed data is visualized in Power BI.
+🔍 SQL Analysis
+
+SQL was used for data validation, KPI analysis, and revenue analysis.
+
+SQL Files
+sql/
+├── 01_data_validation.sql
+├── 02_kpi_analysis.sql
+└── 03_revenue_analysis.sql
+Analysis Performed
+Data validation
+Total revenue analysis
+Total orders
+Total units sold
+Average Order Value (AOV)
+Revenue by product
+Revenue by category
+Revenue by city
+Revenue by payment method
+Revenue trends over time
+Example Query
+SELECT TOP 10 *
+FROM dbo.Sales;
+📊 Power BI Dashboard
+
+The Power BI dashboard provides an interactive view of e-commerce sales performance.
+
+Key KPIs
+Total Revenue
+Total Orders
+Total Units Sold
+Average Order Value (AOV)
+Dashboard Analysis
+
+The dashboard analyzes:
+
+Monthly revenue
+Revenue by category
+Revenue by city
+Revenue by product
+Revenue by payment method
+Revenue vs. units sold
+Interactive Filters
+Date
+Category
+City
+
+Power Query and DAX were used to prepare and analyze the data within Power BI.
+
+📸 Project Screenshots
+Azure Data Factory Pipeline
+
+Azure Data Factory Successful Execution
+
+Azure Blob Storage
+
+Raw Sales Data
+
+Processed Sales Data
+
+Azure SQL Database
+
+Power BI Dashboard
+
+📁 Project Structure
+ecommerce-sales-analytics-azure/
+│
+├── adf/
+│   └── README.md
+│
+├── power-bi/
+│   ├── ecommerce_sales_dashboard.pbix
+│   └── README.md
+│
+├── sql/
+│   ├── 01_data_validation.sql
+│   ├── 02_kpi_analysis.sql
+│   └── 03_revenue_analysis.sql
+│
+├── screenshots/
+│   ├── 01_powerbi_dashboard.png
+│   ├── 02_azure_sql_query.png
+│   ├── 03_adf_pipeline.png
+│   ├── 04_adf_success.png
+│   ├── 05_blob_storage.png
+│   ├── 06_blob_raw_data.png
+│   └── 07_blob_processed_data.png
+│
+└── README.md
+🛠️ Technologies Used
+Cloud & Data
+Microsoft Azure
+Azure Blob Storage
+Azure Data Factory
+Azure SQL Database
+Analytics & Visualization
+SQL
+Microsoft Power BI
+Power Query
+DAX
+Microsoft Excel
+Development
+Visual Studio Code
+Git
+GitHub
+💡 Key Business Analysis
+
+The project enables analysis of:
+
+Overall sales performance
+Revenue trends
+Product performance
+Category performance
+City-level sales
+Payment method distribution
+Order volume
+Units sold
+Average Order Value
+
+The Power BI dashboard allows users to interactively filter the data and investigate sales performance from different perspectives.
+
+🔐 Security
+
+No sensitive credentials should be stored in this repository.
+
+The project should not contain:
+
+Azure SQL passwords
+Storage account access keys
+Connection strings containing passwords
+API keys
+SAS tokens
+Client secrets
+
+Azure credentials are kept outside the source-controlled project files.
+
+🎯 Skills Demonstrated
+Azure Blob Storage
+Azure Data Factory
+Azure SQL Database
+Data integration
+SQL querying
+Data validation
+KPI analysis
+Power Query
+DAX
+Power BI
+Data visualization
+Git & GitHub
+End-to-end data analytics
+👤 Author
+
+Bhuvan P
+
+BCA Graduate | Aspiring Data Analyst
+
+Areas of Interest: Data Analytics, SQL, Power BI, Excel, Azure, Python, and Data Visualization.
