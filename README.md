@@ -27,7 +27,10 @@ Raw CSV → Azure Blob Storage → Azure Data Factory → Processed Data → Azu
 
 ## 🏗️ Architecture
 
+<<<<<<< HEAD
 ```text
+=======
+>>>>>>> 7b1c4e0d627afb7efed437c945c6cd784ac9adc0
                     Raw Sales Data
                          │
                          ▼
@@ -55,15 +58,27 @@ Raw CSV → Azure Blob Storage → Azure Data Factory → Processed Data → Azu
                          │
                          ▼
                   Power BI Dashboard
+<<<<<<< HEAD
 ☁️ Azure Services
 Azure Blob Storage
 
 Used to store the raw and processed sales data.
 
+=======
+
+## ☁️ Azure Services
+
+### Azure Blob Storage
+
+Used to store the raw and processed sales data.
+
+```text
+>>>>>>> 7b1c4e0d627afb7efed437c945c6cd784ac9adc0
 raw-data/
 └── sales.csv
 
 processed-data/
+<<<<<<< HEAD
 └── sales_processed...
 Azure Data Factory
 
@@ -87,21 +102,61 @@ Database: EcommerceDB
 Table: dbo.Sales
 
 🔄 Data Pipeline
+=======
+└── sales_processed.csv
+```
+
+### Azure Data Factory
+
+Used as the data integration layer.
+
+**Pipeline:** `PL_Load_Sales_Data`
+
+**Activities:**
+
+- `Copy data1`
+- `Copy data2`
+
+The pipeline was successfully validated and executed.
+
+### Azure SQL Database
+
+Used to store and query the structured sales data.
+
+**Database:** `EcommerceDB`
+
+**Table:** `dbo.Sales`
+
+## 🔄 Data Pipeline
+
+>>>>>>> 7b1c4e0d627afb7efed437c945c6cd784ac9adc0
 Raw sales.csv is stored in Azure Blob Storage.
 Azure Data Factory processes and moves the data.
 Processed data is stored in the processed-data container.
 Sales data is available in Azure SQL Database.
 SQL queries are used for validation and analysis.
 The analyzed data is visualized in Power BI.
+<<<<<<< HEAD
 🔍 SQL Analysis
 
 SQL was used for data validation, KPI analysis, and revenue analysis.
 
 SQL Files
+=======
+
+## 🔍 SQL Analysis
+
+SQL was used for data validation, KPI analysis, and revenue analysis.
+
+### SQL Files
+
+```text
+>>>>>>> 7b1c4e0d627afb7efed437c945c6cd784ac9adc0
 sql/
 ├── 01_data_validation.sql
 ├── 02_kpi_analysis.sql
 └── 03_revenue_analysis.sql
+<<<<<<< HEAD
 Analysis Performed
 Data validation
 Total revenue analysis
@@ -116,6 +171,30 @@ Revenue trends over time
 Example Query
 SELECT TOP 10 *
 FROM dbo.Sales;
+=======
+```
+
+### Analysis Performed
+
+- Data validation
+- Total revenue analysis
+- Total orders
+- Total units sold
+- Average Order Value (AOV)
+- Revenue by product
+- Revenue by category
+- Revenue by city
+- Revenue by payment method
+- Revenue trends over time
+
+### Example Query
+
+```sql
+SELECT TOP 10 *
+FROM dbo.Sales;
+```
+
+>>>>>>> 7b1c4e0d627afb7efed437c945c6cd784ac9adc0
 📊 Power BI Dashboard
 
 The Power BI dashboard provides an interactive view of e-commerce sales performance.
@@ -145,6 +224,7 @@ Power Query and DAX were used to prepare and analyze the data within Power BI.
 📸 Project Screenshots
 Azure Data Factory Pipeline
 
+<<<<<<< HEAD
 Azure Data Factory Successful Execution
 
 Azure Blob Storage
@@ -158,6 +238,39 @@ Azure SQL Database
 Power BI Dashboard
 
 📁 Project Structure
+=======
+<img width="957" height="473" alt="03_adf_pipeline" src="https://github.com/user-attachments/assets/add1aeb0-0b67-461a-a227-1743479f5af6" />
+
+Azure Data Factory Successful Execution
+
+<img width="956" height="473" alt="adf-pipeline-success" src="https://github.com/user-attachments/assets/5ca7b33c-c273-47ba-a05c-be8ab075939f" />
+
+Azure Blob Storage
+
+<img width="956" height="470" alt="azure_blob_containers" src="https://github.com/user-attachments/assets/3dcc53d5-4fc3-47e5-97d3-c810acca0fe5" />
+
+Raw Sales Data
+
+<img width="959" height="467" alt="azure_blob_raw_data" src="https://github.com/user-attachments/assets/d7180939-1b50-4fad-b4f0-beee567c1f8e" />
+
+Processed Sales Data
+
+<img width="950" height="472" alt="azure_blob_processed_data" src="https://github.com/user-attachments/assets/e64cf251-0149-47ee-91e3-86035bc880bb" />
+
+Azure SQL Database
+
+<img width="956" height="473" alt="azure-sql-query" src="https://github.com/user-attachments/assets/73fc14be-fb6a-4a09-aee9-f312b08d7ea2" />
+
+Power BI Dashboard
+
+
+<img width="389" height="437" alt="ecommerce-sales-dashboard" src="https://github.com/user-attachments/assets/57e0960e-87e2-40cc-a4c9-34d78c721c11" />
+
+
+## 📁 Project Structure
+
+```text
+>>>>>>> 7b1c4e0d627afb7efed437c945c6cd784ac9adc0
 ecommerce-sales-analytics-azure/
 │
 ├── adf/
@@ -182,6 +295,7 @@ ecommerce-sales-analytics-azure/
 │   └── 07_blob_processed_data.png
 │
 └── README.md
+<<<<<<< HEAD
 🛠️ Technologies Used
 Cloud & Data
 Microsoft Azure
@@ -213,6 +327,47 @@ Units sold
 Average Order Value
 
 The Power BI dashboard allows users to interactively filter the data and investigate sales performance from different perspectives.
+=======
+```
+
+## 🛠️ Technologies Used
+
+### Cloud & Data
+
+- Microsoft Azure
+- Azure Blob Storage
+- Azure Data Factory
+- Azure SQL Database
+
+### Analytics & Visualization
+
+- SQL
+- Microsoft Power BI
+- Power Query
+- DAX
+- Microsoft Excel
+
+### Development
+
+- Visual Studio Code
+- Git
+- GitHub
+
+  
+## 💡 Key Business Analysis
+
+The project enables analysis of:
+
+- Overall sales performance
+- Revenue trends
+- Product performance
+- Category performance
+- City-level sales
+- Payment method distribution
+- Order volume
+- Units sold
+- Average Order Value
+>>>>>>> 7b1c4e0d627afb7efed437c945c6cd784ac9adc0
 
 🔐 Security
 
@@ -249,4 +404,8 @@ Bhuvan P
 
 BCA Graduate | Aspiring Data Analyst
 
+<<<<<<< HEAD
 Areas of Interest: Data Analytics, SQL, Power BI, Excel, Azure, Python, and Data Visualization.
+=======
+Areas of Interest: Data Analytics, SQL, Power BI, Excel, Azure, Python, and Data Visualization.
+>>>>>>> 7b1c4e0d627afb7efed437c945c6cd784ac9adc0
